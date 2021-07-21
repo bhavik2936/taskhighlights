@@ -1,0 +1,17 @@
+{
+  "/_app": "pages/_app.js",
+  "/api/v1/allPages": "pages/api/v1/allPages.js",
+  "/api/v1/allTodos": "pages/api/v1/allTodos.js",
+  "/api/v1/page": "pages/api/v1/page.js",
+  "/api/v1/story": "pages/api/v1/story.js",
+  "/api/v1/todo": "pages/api/v1/todo.js",
+  "/api/v1/user": "pages/api/v1/user.js",
+  "/p/[user_username]": "pages/p/[user_username].js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/en/404": "pages/en/404.html",
+  "/en/500": "pages/en/500.html",
+  "/en/sign-in": "pages/en/sign-in.html",
+  "/en/sign-up": "pages/en/sign-up.html",
+  "/en": "pages/en.html"
+}
