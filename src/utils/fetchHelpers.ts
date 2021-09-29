@@ -377,3 +377,17 @@ export const fetch_createManyHabit = async ({
 
   return data.json();
 };
+
+export const fetch_updateUserLastseen = async (
+  date: string,
+  user_id: TYPES.user_id
+) => {
+  const data = await fetch(
+    `${API_V1}user?user_id=${user_id}&lastseen=${date}`,
+    {
+      method: "PUT"
+    }
+  );
+
+  return data.json();
+};

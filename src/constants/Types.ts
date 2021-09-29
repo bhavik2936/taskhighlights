@@ -81,6 +81,7 @@ export interface User_Request_Body {
   user_fullname: user_fullname;
   user_username: user_username;
   user_id: user_id;
+  work: "create" | "streak";
 }
 
 export interface Page_Body {

@@ -7,6 +7,7 @@ import { DefaultSeo } from "next-seo";
 import FireUserContext from "../contexts/FireUserContext";
 import { auth } from "../libs/Firebase";
 import { default_seo } from "../../next-seo.config";
+import { fetch_updateUserLastseen } from "../utils/fetchHelpers";
 import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         router.push("/");
       } else {
         setFireId(user?.uid);
+        fetch_updateUserLastseen(new Date().toISOString(), user?.uid);
       }
     });
   }, [router, fireId]);

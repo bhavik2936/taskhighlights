@@ -982,3 +982,30 @@ export const prisma_getAllArchivedTodosByPage = async (
 
   return todos;
 };
+
+export const prisma_updateUserLastseen = async (
+  date: Date,
+  user_id: TYPES.user_id
+) => {
+  await prisma.user.update({
+    where: {
+      user_id
+    },
+    data: {
+      user_lastseen: date
+    }
+  });
+};
+
+export const prisma_compareDayUpdateStreak = (
+  prev_date,
+  next_date,
+  user_id
+) => {
+  const change =
+    new Date().getDate() - new Date(prev_date).getDate() === 0 ? false : true;
+
+  if (change) {
+    
+  }
+};
